@@ -38,7 +38,6 @@ module.exports = {
               mozjpeg: {
                 progressive: true,
               },
-              // Optimize PNG and other image formats
               optipng: {
                 enabled: true,
               },
