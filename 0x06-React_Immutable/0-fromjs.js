@@ -1,6 +1,7 @@
-const { fromJS } = require('immutable');
+//const { fromJS } = require('immutable');
+import { fromJS } from './node_modules/immutable/dist/immutable';
 
-// Converts a JavaScript object into an Immutable.js Map
+/* Converts a JavaScript object into an Immutable.js Map*/
 
 function getImmutableObject(object) {
     return fromJS(object);
