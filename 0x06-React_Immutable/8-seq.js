@@ -5,14 +5,12 @@ export default function printBestStudents(grades) {
   const bestStudent = Seq(gradesMap)
     .filter(student => student.get('score') >= 70)
     .map(student => ({
-      firstName: capitalize(student.get('firstName')),
-      lastName: capitalize(student.get('lastName'))
+      firstName:
+        student.firstName.charAt(0).toUpperCase() + student.firstName.slice(1),
+      lastName:
+        student.lastName.charAt(0).toUpperCase() + student.lastName.slice(1),
     }));
   bestStudent.forEach(student => {
     console.log(`${student.firstName} ${student.lastName}`);
   });
-}
-
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
