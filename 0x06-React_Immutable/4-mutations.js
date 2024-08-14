@@ -7,7 +7,8 @@ export const map = Map({
     4: 'Oliver',
     5: 'Jacob',
     6: 'Lucas',
-})
+});
+
 export const map2 = map
-.set(2, 'Binjamin')
-.set(4, 'Oliver');
+  .set(2, 'Binjamin')
+  .set(4, 'Oliver');
