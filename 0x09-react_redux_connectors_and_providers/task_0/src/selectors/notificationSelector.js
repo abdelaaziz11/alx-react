@@ -1,0 +1,15 @@
+import { Map } from 'immutable';
+
+export const filterTypeSelected = (state) => state.get('filter');
+export const getNotifications = (state) => state.notifications;
+export const getUnreadNotifications = (state) => {
+    const notifications = state.gteIn([
+        'notifications',
+        'entities',
+        'notifications',
+    ]);
+    const unreadNotifications = notifications.filter(
+        (notification) => !notification.isRead
+    );
+    return Map(unreadNotifications);
+};
